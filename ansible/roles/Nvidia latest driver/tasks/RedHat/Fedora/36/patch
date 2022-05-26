@@ -1,0 +1,5 @@
+---
+- name: install Kernel Headers
+  dnf:
+    name: kernel-devel-matched-5.17.9
+    state: latest
