@@ -2,3 +2,12 @@
 
 - include_role:
     name: RPM Fusion
+
+- name: Install drivers - for the most recent GeForce
+  dnf:
+    name: akmod-nvidia
+    state: latest
+  become: true
+
+
+#https://tecadmin.net/how-to-install-nvidia-drivers-on-fedora/
