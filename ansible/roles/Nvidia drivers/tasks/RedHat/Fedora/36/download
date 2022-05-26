@@ -1,0 +1,14 @@
+---
+
+- get_url:
+    url: https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+    dest: /tmp/
+#    checksum: "sha256:{{ rpm_checksum_sha256 }}"
+
+- name: Install Google Chrome
+  dnf:
+    name: /tmp/google-chrome-stable_current_x86_64.rpm
+    state: present
+    disable_gpg_check: yes
+  become: true
+

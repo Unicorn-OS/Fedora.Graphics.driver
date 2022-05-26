@@ -1,0 +1,32 @@
+this=ansible/.this
+
+copy_template(){
+  cp test/inventory/hosts.template test/inventory/hosts
+  ln -srf test/inventory/hosts ../../hosts
+}
+
+future_set_host(){
+  . host
+  sed -i "s/localhost/$host/" test/inventory/hosts
+}
+
+set_user(){
+  sed -i "s/ansible_user=me/ansible_user=$USER/" test/inventory/hosts
+}
+
+template_files(){
+  ln -srf ansible.cfg ..
+  ln -srf uni ..
+}
+
+
+main(){
+  cd $this
+  copy_template
+#  future_set_host
+  set_user
+  template_files
+  cd -
+}
+
+main

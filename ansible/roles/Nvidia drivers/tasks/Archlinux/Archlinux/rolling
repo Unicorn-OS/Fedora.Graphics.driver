@@ -1,0 +1,9 @@
+---
+# Never finished!
+- name: Atom
+  kewlfft.aur.aur:
+    name: google-chrome
+    use: yay
+    state: present
+  become: yes
+  become_user: aur_builder
