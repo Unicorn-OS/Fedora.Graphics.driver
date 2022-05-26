@@ -10,7 +10,7 @@ ansible_become_password=u
 [remote]
 192.168.1.*
 
-[local:vars]
+[remote:vars]
 ansible_user=me
 ansible_become_password=u
 

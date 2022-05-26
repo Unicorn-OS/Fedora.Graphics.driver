@@ -1,0 +1,9 @@
+---
+- debug:
+    var: ansible_facts['distribution_version']
+
+- name: enable the RPM Fusion repository
+  dnf:
+    name: "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_facts['distribution_version'] }}.noarch.rpm "
+    state: present
+  become: true
