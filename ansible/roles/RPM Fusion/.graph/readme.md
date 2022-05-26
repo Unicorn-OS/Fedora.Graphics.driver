@@ -1,0 +1,1 @@
+https://rpmfusion.org/Configuration/
