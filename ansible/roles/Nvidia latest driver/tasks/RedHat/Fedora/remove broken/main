@@ -1,0 +1,15 @@
+---
+- name: Remove akmod-nvidia
+  dnf:
+    name:
+      - akmod-nvidia
+    state: absent
+
+
+- name: Remove xorg-x11-drv-nvidia\*
+  dnf:
+    name:
+      - xorg-x11-drv-nvidia\*
+    state: absent
+
+# https://ask.fedoraproject.org/t/fedora-linux-kernel-update-breaks-nvidia-driver/21954/10

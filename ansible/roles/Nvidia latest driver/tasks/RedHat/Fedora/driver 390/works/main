@@ -1,0 +1,10 @@
+---
+# Works if you Turn Off Secure Boot!
+
+- name: Install Nvidia 390 driver and nvidia-smi
+  dnf:
+    name:
+      - xorg-x11-drv-nvidia-390xx
+      - akmod-nvidia-390xx
+      - xorg-x11-drv-nvidia-390xx-cuda
+    state: latest
