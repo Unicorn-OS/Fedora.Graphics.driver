@@ -5,3 +5,14 @@ localhost
 ansible_connection=local
 ansible_user=me
 ansible_become_password=u
+
+
+[remote]
+192.168.1.*
+
+[local:vars]
+ansible_user=me
+ansible_become_password=u
+
+[this:children]
+remote

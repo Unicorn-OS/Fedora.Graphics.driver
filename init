@@ -14,7 +14,7 @@ set_user(){
   sed -i "s/ansible_user=me/ansible_user=$USER/" test/inventory/hosts
 }
 
-template_files(){
+link_template(){
   ln -srf ansible.cfg ..
   ln -srf uni ..
 }
@@ -25,7 +25,7 @@ main(){
   copy_template
 #  future_set_host
   set_user
-  template_files
+  link_template
   cd -
 }
 
