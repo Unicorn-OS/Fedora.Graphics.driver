@@ -2,7 +2,7 @@ this=ansible/.this
 
 copy_template(){
   cp test/inventory/hosts.template test/inventory/hosts
-  ln -srf test/inventory/hosts ../../hosts
+  cp test/inventory/hosts ../../hosts
 }
 
 future_set_host(){
@@ -11,7 +11,7 @@ future_set_host(){
 }
 
 set_user(){
-  sed -i "s/ansible_user=me/ansible_user=$USER/" test/inventory/hosts
+  sed -i "s/ansible_user=me/ansible_user=$USER/" ../../hosts
 }
 
 link_template(){
